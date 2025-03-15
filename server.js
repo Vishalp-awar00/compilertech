@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 // Middleware declarations
 app.use(cors({
-  origin: ["https://a2ik-vishalp-awars-projects.vercel.app", "http://localhost:3000"], // Allow both origins
+  origin: ["compilertech-iu2o1deuw-vishalpawar001990s-projects.vercel.app", "http://localhost:3000"], // Allow both origins
   methods: "POST",
   allowedHeaders: ["Content-Type"],
 }));
