@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers Compiler Technologies - IT Consulting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+          <div class="logo" style="cursor: pointer;" onclick="window.location.href='/'">Compiler Technologies</div>
+            <div id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="dashboard">Dashboard</a></li>
+                <li><a href="careers">Careers</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="careers" class="parallax-section" data-scroll-section>
+            <div class="container">
+                <h2 class="section-title">Join Our Team</h2>
+                <div id="job-boards" class="apply-job2">
+                  <h3>Explore Our Job Boards</h3>
+                  <div id="job-board-grid" class="job-board-grid">
+                    <% if (jobBoard && jobBoard.length > 0) { %>
+                      <% jobBoard.forEach(function(job) { %>
+                        <div class="job-card">
+                          <h4><%= job.category %></h4>
+                          <p>Available Positions: <%= job.openposition %></p>
+                        </div>
+                      <% }); %>
+                    <% } else { %>
+                      <p>No jobs available at the moment.</p>
+                    <% } %>
+                  </div>
+
+                <div class="head">
+                    <h1>Job Search</h1>
+                    <div class="search-container">
+                      <input id="searchInput" type="text" class="search-input" placeholder="Search for jobs...">
+                      <button id="searchButton" class="search-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                          <circle cx="11" cy="11" r="8" />
+                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                <div id="job-openings" class="job-openings">
+                    <h3>Current Job Openings</h3>
+                    
+                </div>
+                <div class="main-content">
+                    <div class="filters">
+                      <h3 class="filter-title">Filters</h3>
+                      <div class="filter-buttons">
+                        <div class="filter-group">
+                          <button class="filter-button" data-filter="location">Location
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="M6 9l6 6 6-6" />
+                            </svg>
+                          </button>
+                          <div class="dropdown hidden" id="locationDropdown">
+                            <button class="dropdown-item" data-value="New York">New York</button>
+                            <button class="dropdown-item" data-value="San Francisco">Delhi</button>
+                            <button class="dropdown-item" data-value="Remote">Remote</button>
+                          </div>
+                        </div>
+                        <div class="filter-group">
+                          <button class="filter-button" data-filter="experienceLevel">Experience Level
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="M6 9l6 6 6-6" />
+                            </svg>
+                          </button>
+                          <div class="dropdown hidden" id="experienceLevelDropdown">
+                            <button class="dropdown-item" data-value="Entry Level">Entry Level</button>
+                            <button class="dropdown-item" data-value="Mid Level">Mid Level</button>
+                            <button class="dropdown-item" data-value="Senior Level">Senior Level</button>
+                          </div>
+                        </div>
+                        <div class="filter-group">
+                          <button class="filter-button" data-filter="contractType">Contract Type
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                              <path d="M6 9l6 6 6-6" />
+                            </svg>
+                          </button>
+                          <div class="dropdown hidden" id="contractTypeDropdown">
+                            <button class="dropdown-item" data-value="Full-Time">Full-Time</button>
+                            <button class="dropdown-item" data-value="Part-Time">Part-Time</button>
+                            <button class="dropdown-item" data-value="Contract">Contract</button>
+                          </div>
+                        </div>
+                       
+                         <!-- Clear Filter button -->
+                         <button style="text-align: center; margin-top: 5px;  padding-top: 5px; width: auto;" id="clearFiltersButton" class="clear-filters-button">
+                          Clear Filters
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                             
+                          </svg>
+                      </button>
+                        
+                      </div>
+                     
+                    </div>
+                  </div>
+                  
+
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Location</th>
+                            <th>Experience Level</th>
+                            <th>Contract Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobsTableBody">
+                        <!-- Job listings will be dynamically inserted here -->
+                    </tbody>
+               
+            
+                  
+                        
+                        
+                    </table>
+
+                 
+                </div>
+
+                <div class="benefits-section">
+                    <h3>Why Work With Us?</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🏠</div>
+                            <h4>Flexible Work Environment</h4>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">⚖️</div>
+                            <h4>Work-Life Balance</h4>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon">🎓</div>
+                            <h4>Continuous Learning Opportunities</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="employee-spotlight">
+                    <h3>Employee Spotlight</h3>
+                    <blockquote>
+                        "Working at Compiler Technologies has been an incredible journey. The supportive environment,
+                        challenging projects, and opportunities for growth have helped me develop both personally and
+                        professionally. I'm proud to be part of a team that's making a real difference in the world of
+                        technology."
+                    </blockquote>
+                    <p class="quote-author">- Vishal Pawar, System Engineer</p>
+                </div>
+
+            </div>
+        </section>
+       <!-- Modal for job application -->
+       <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Applying for <span id="jobTitle"></span> Role</h2>
+            <form id="applyjob" action="/api/applyjob" method="POST" enctype="multipart/form-data">
+                <input type="hidden" id="job-id" name="job-id">
+                <div class="job-details">
+                    <div class="form-group">
+                        <h4>About the Job</h4>
+                        <p id="job-about"></p>
+                    </div>
+                    <div class="form-group">
+                        <h4>Job Responsibilities</h4>
+                        <p id="job-responsibilities"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Resume</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover-letter">Cover Letter</label>
+                    <textarea id="cover-letter" name="cover-letter" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit Application</button>
+            </form>
+            <!-- Loading Indicator -->
+<div id="loadingIndicator" style="display: none;">
+    <p>Submitting, please wait...</p>
+    <div class="spinner"></div> <!-- Optionally add a CSS spinner -->
+</div>
+        </div>
+    </div>
+        
+    </main>
+
+    <footer data-scroll-section>
+        <p>&copy; 2025 Compiler Technologies. All rights reserved.</p>
+    </footer>
+    <script>
+      // Set BASE_URL and PORT using EJS
+      const BASE_URL = "<%= env.BASE_URL %>".replace(/\/$/, ''); // Remove trailing slash if any
+      const PORT = "<%= env.PORT %>";
+      
+      console.log("BASE_URL:", BASE_URL); // Check if the URL is correct
+      console.log("PORT:", PORT); // Check if the port is correct
+    </script>
+    
+    <script>
+        const allJobs = <%- JSON.stringify(job) %>;     
+    </script>
+
+      <script src="/script/careers.js"></script>
+
+
+
+   <script src="/script/analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  console.log('Hamburger clicked');
+  navLinks.classList.toggle('active');
+});
+
+    </script>
+</body>
+
+</html>
+
+

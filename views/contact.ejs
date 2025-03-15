@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Compiler Technologies - IT Consulting</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" style="cursor: pointer;" onclick="window.location.href='/'">Compiler Technologies</div>
+          <div id="hamburger" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul id="nav-links" class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="dashboard">Dashboard</a></li>
+            <li><a href="careers">Careers</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" class="contact-form"  method="POST">
+                <div class="form-group">
+                    <label for="namejs" style="font: bold; margin-left: 5px; ">Name</label>
+                    <input class="input" type="text" id="namejs" name="namejs" required />
+                </div>
+                <div class="form-group">
+                    <label for="emailjs" style="font: bold; margin-left: 5px; ">Email</label>
+                    <input class="input" type="email" id="emailjs" name="emailjs" required />
+                </div>
+                <div class="form-group">
+                    <label for="message" style="margin-left: 5px; ">Message</label>
+                    <textarea name="message" class="textinput" id="message" placeholder="Please enter query..." required></textarea>
+                </div>
+                <div id="status" style="color: green; font-weight: bold; margin: 5px; text-align: center;"></div>
+            
+                <div class="submit-btn-wreappr">
+                    <button class="submit-btn" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Compiler Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/script/analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="/script/contact.js" defer></script>
+    <script src="/script/script.js"></script>
+</body>
+</html>
