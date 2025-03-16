@@ -31,7 +31,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   const name = document.getElementById("namejs").value.trim();
   const email = document.getElementById("emailjs").value.trim();
   const message = document.getElementById("message").value.trim();
-
+  const mobile = document.getElementById("mobile").value.trim();
   // Error elements
   const statusElement = document.getElementById("status");
 
@@ -45,6 +45,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     return;
   }
 
+  const mobilePattern = /^[0-9]{10,15}$/;
+  if (!mobilePattern.test(mobile)) {
+    statusElement.innerText = "Please enter a valid mobile number (10-15 digits).";
+    return;
+  }
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     statusElement.innerText = "Please enter a valid email address.";
@@ -61,6 +66,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     from_name: name,
     from_email: email,
     message: message,
+    mobile: mobile,
   };
 
   try {
@@ -84,6 +90,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
       document.getElementById("namejs").value = "";
       document.getElementById("emailjs").value = "";
       document.getElementById("message").value = "";
+      document.getElementById("mobile").value = "";
     } else {
       throw new Error('Failed to save message to database.');
     }

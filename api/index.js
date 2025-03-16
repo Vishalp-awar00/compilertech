@@ -317,11 +317,11 @@ router.get("/emailjs", (req, res) => {
    */
   router.post("/contactus", async (req, res) => {
     try {
-      const { from_name, from_email, message } = req.body;
+      const { from_name, from_email, message,mobile } = req.body;
       const db = await connectToDatabase();
       await db
         .collection("contactus")
-        .insertOne({ from_name, from_email, message });
+        .insertOne({ from_name, from_email, message,mobile });
       res.status(201).send("contactus data received");
     } catch (error) {
       console.error(error);
